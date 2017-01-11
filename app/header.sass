@@ -16,98 +16,113 @@ body, html
 
 .header
   color: $alt_font_color
+  overflow: hidden
   width: 100%
   background-image: url('img/header_bg.jpg')
   -webkit-background-size: cover
   background-size: cover
-  &__slider
-    display: block
-    float: left
-    width: 65%
-
-  &__form
-    display: block
-    width: 35%
-    z-index: 2
-    float:  right
-    h2
-      z-index: 2
-      color: #ffba00
-      font-family: 'Gotham', serif
-      font-weight: bold
-      text-shadow: 3px 4px 10px rgba(0, 0, 0, 0.94)
-      font-size: 2em
-      text-transform: uppercase
-      line-height: 1.5em
-      text-align: center
-    form
-      width: 80%
-      z-index: 2
-      text-align: left
-      padding-left: 15%
-      h2
-        text-align: center
-      input, button
-        border: none
-        box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.75) inset
-        margin-bottom: 1em
-        width: 100%
-        display: block
-        &[type="checkbox"]
-          width: 10px
-          display: block
-  h1
+  position: relative
+  z-index: 2
+  .header__carousel
     position: absolute
+    bottom: 0
+    left: 10%
+    .item__img
+      z-index: -3
+      width: 70vw
+
+
+
+  h1
     text-shadow: 0 5px 7px rgba(0, 0, 0, 0.89)
-    font-family: 'Gotham', serif
     font-weight: bold
     line-height: 1.2em
     z-index: 2
-  .owl-carousel
-
-    width: 100%
-    .owl-stage-outer
-      min-height: 500px
-      .item
-        position: absolute
-        height: 500px
-        width: 100%
-        display: block
-        .item__img
-          z-index: -5
-          position: absolute
-          bottom: 0
-          width: 100%
-          height: 100%
-          background-image: url('img/slider/financial_man.png')
-          background-size: cover
-
-    .item__quote
-      z-index: 1
-      margin-top: 150px
-      background-color: rgba(6, 12, 22, 0.82)
+    font-family: 'Gotham Black', sans-serif
+    font-size: 3em
+    text-transform: uppercase
+  h2
+    text-align: center
+    text-shadow: 1px 2px 2px rgba(0, 4, 2, 0.75)
+    color: #ffba00
+    font-size: 2.5em
+    line-height: 1.3em
+  form
       padding: 1em
-      width: 88%
-      max-width: 400px
-      img
-        display: block
-        float: left
-        margin-right: 2em
-      p
-        font-family: 'Gotham', serif
-        font-weight: lighter
-        &.quote__text
-          padding-top: 1.5em
-          padding-bottom: 1.5em
-        span
-          &.colored
-            color: #fcc508
-          &.enhansed
-            font-size: 1.3em
-  &.owl-theme .owl-dots
-    margin-top: 1em
+      margin-bottom: 4em
+      input, select
+        padding: 5px
+        border: none
+        margin: 0
+        height: 2.3em
 
-    
+        &:focus
+          outline-color: #FFBA00
+      select
+        margin: 0.8em 0
+        width: 100%
+        color: #000402
+      input[placeholder*="First"],input[placeholder*="Last"]
+        width: 100%
+        margin-bottom: 1em
+        margin-right: 2px
+      input[placeholder*="Email"],  input[placeholder*="Phone"]
+        width: 100%
+
+      input[type*="checkbox"]
+        height: 1em
+      .input_container
+        position: relative
+        width: 350px
+        margin: 0 auto
+        margin-top: 1em
+        &:before
+          content: ''
+          display: block
+          position: absolute
+          width: 30px
+          height: 30px
+          background-image: url('img/blink.png')
+          -webkit-background-size: cover
+          background-size: cover
+          z-index: 100
+          right: -3%
+          top: -15%
+      input[placeholder*="Phone"]
+        margin-top: 0.8em
+        &:before
+          content: 'a'
+          width: 20px
+          height: 20px
+          border-right: 1px solid #EAEAEA
+
+      input[type*="submit"]
+        display: block
+        width: 100%
+        text-align: center
+        height: 3em
+        padding: 0 1em
+        font-weight: bold
+        font-size: 23px
+        color: #000402
+        border-radius: 7px
+        position: relative
+        background: #fceabb
+        background: -moz-linear-gradient(top, #fceabb 0%, #fccd4d 33%, #f8b500 100%, #f9c94d 100%)
+        background: -webkit-linear-gradient(top, #fceabb 0%,#fccd4d 33%,#f8b500 100%,#f9c94d 100%)
+        background: linear-gradient(to bottom, #fceabb 0%,#fccd4d 33%,#f8b500 100%,#f9c94d 100%)
+        transition: all 0.3s ease
+        box-shadow: 0px 2px 0px 0px rgba(183, 96, 13, 1)
+        &:focus
+          outline-color: transparent
+        &:hover
+          background: #f8b500
+          background: -moz-linear-gradient(top, #f8b500 0%, #fccd4d 64%, #fceabb 100%, #fceabb 100%, #fceabb 100%)
+          background: -webkit-linear-gradient(top, #f8b500 0%,#fccd4d 64%,#fceabb 100%,#fceabb 100%,#fceabb 100%)
+          background: linear-gradient(to bottom, #f8b500 0%,#fccd4d 64%,#fceabb 100%,#fceabb 100%,#fceabb 100%)
+
+
+
 .body__section
   &--startTrading
     background-color: $alt_font_color
@@ -247,7 +262,7 @@ body, html
     background-size: cover
     h2
       font-size: 2.8em
-      font-family: 'Gotham Medium'
+      font-family: 'Gotham Medium', sans-serif
       font-weight:  normal
       line-height: 1.3em
       color: #68a625
@@ -282,14 +297,14 @@ body, html
     h2
       text-align: center
       color: #ffba00
-      font-family: 'Gotham Black'
+      font-family: 'Gotham Black', sans-serif
       font-size: 3em
       text-transform: uppercase
       text-shadow: 1px 2px 2px rgba(0, 4, 2, 0.75)
       line-height: 1.3em
     form
       margin: 1em 4em
-      border-radius: 1em
+      border-radius: 0.9em
       border: 1px solid #ffba00
       padding: 2em
       input, select
@@ -297,14 +312,156 @@ body, html
         border: none
         margin: 0
         height: 2.3em
+        &:focus
+          outline-color: #FFBA00
       input[placeholder*="First"],input[placeholder*="Last"]
         width: 25%
         margin-bottom: 1em
         margin-right: 2px
       input[placeholder*="Email"],  input[placeholder*="Phone"]
         width: 45%
+      input[type*="checkbox"]
+        height: 1em
+      .input_container
+        position: relative
+        width: 400px
+        margin: 0 auto
+        margin-top: 2em
+        &:before
+          content: ''
+          display: block
+          position: absolute
+          width: 30px
+          height: 30px
+          background-image: url('img/blink.png')
+          -webkit-background-size: cover
+          background-size: cover
+          z-index: 100
+          right: -3%
+          top: -15%
+      input[placeholder*="Phone"]
+        &:before
+          content: 'a'
+          width: 20px
+          height: 20px
+          border-right: 1px solid #EAEAEA
+
+      input[type*="submit"]
+        display: block
+        width: 100%
+        text-align: center
+        height: 3em
+        padding: 0 2em
+        font-weight: bold
+        font-size: 23px
+        border-radius: 7px
+        position: relative
+        background: #fceabb
+        background: -moz-linear-gradient(top, #fceabb 0%, #fccd4d 33%, #f8b500 100%, #f9c94d 100%)
+        background: -webkit-linear-gradient(top, #fceabb 0%,#fccd4d 33%,#f8b500 100%,#f9c94d 100%)
+        background: linear-gradient(to bottom, #fceabb 0%,#fccd4d 33%,#f8b500 100%,#f9c94d 100%)
+        transition: all 0.3s ease
+        box-shadow: 0px 2px 0px 0px rgba(183, 96, 13, 1)
+        &:focus
+          outline-color: transparent
+        &:hover
+          background: #f8b500
+          background: -moz-linear-gradient(top, #f8b500 0%, #fccd4d 64%, #fceabb 100%, #fceabb 100%, #fceabb 100%)
+          background: -webkit-linear-gradient(top, #f8b500 0%,#fccd4d 64%,#fceabb 100%,#fceabb 100%,#fceabb 100%)
+          background: linear-gradient(to bottom, #f8b500 0%,#fccd4d 64%,#fceabb 100%,#fceabb 100%,#fceabb 100%)
+
+
       select
         width: 51%
         margin-right: 2px
       label
         color: #fff
+        margin-top: 1em
+        display: block
+        line-height: 0.6em
+        &:hover
+          cursor: pointer
+
+  &--Tools
+    padding-bottom: 70px
+    background-image: url('img/tools_bg.jpg')
+    -webkit-background-size: cover
+    background-size: cover
+    background-position: 50% 0
+    h2
+      font-size: 3em
+      font-family: "Gotham", sans-serif
+      font-weight: lighter
+      span.enchansed
+        font-size: 1.15em
+        font-family: "Gotham Medium", sans-serif
+        &.red
+          color: #7b0619
+        &.blue
+          color: #032141
+    .Tools_container
+      display: flex
+      flex-wrap: wrap
+      position: relative
+      justify-content: center
+      &__item
+        text-align: center
+        font-size: 18px
+        width: 33%
+        line-height: 1.6em
+        margin-top: 60px
+        .item__img
+          border-radius: 50%
+          border: 1px solid #68a625
+          width: 200px
+          height: 200px
+          margin: 0 auto
+          padding: 13%
+        .item__description
+          h3
+            text-transform: uppercase
+            font-family: "Gotham Medium", sans-serif
+            color: #68a625
+            font-size: 21px
+          p
+            font-family: "Gotham Pro", sans-serif
+            span.enchansed
+              font-size: 21px
+  &--AcceptProud
+    padding-top: 50px
+    padding-bottom: 50px
+    text-align: center
+    font-family: 'Gotham Pro Light', sans-serif
+    h2
+      font-size: 34px
+    .hr
+      background-image: url('img/hr.png')
+      background-position: 50% 50%
+      background-size: cover
+      width: 100%
+      height: 30px
+    .logosContainer
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      img
+        margin: 0.3em
+        width: 100%
+
+    .awardsContainer
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      img
+        margin: 0.3em
+  
+
+
+
+
+.body__footer
+  padding-top: 40px
+  padding-bottom: 50px
+  color: #a3a3a3
+  background-color: #282828
+  font-family: 'Gautami', sans-serif
