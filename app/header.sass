@@ -13,23 +13,68 @@ body, html
 
 .hidden-desktop
   display: none
-
+.logoStripe .body__logoStripe img
+    width: 33%
 .header
+  transition: background 0.7s ease
   color: $alt_font_color
   overflow: hidden
   width: 100%
   background-image: url('img/header_bg.jpg')
   -webkit-background-size: cover
   background-size: cover
+  background-position: 50% 50%
   position: relative
-  z-index: 2
-  .header__carousel
+  z-index: 1
+  .slick_C
+    .item
+      margin-left: 10px
+      &:focus
+        outline-color: transparent
+  .slide__img
     position: absolute
-    bottom: 0
-    left: 10%
-    .item__img
-      z-index: -3
-      width: 70vw
+    top: 0
+    z-index: -1
+    img
+      width: 1000px
+  span.colored
+    color: #fcc508
+  span.enhansed
+      font-size: 1.3em
+  .item__quote
+      z-index: 100
+      background-color: rgba(6, 12, 22, 0.82)
+      padding: 1em
+      width: 88%
+      max-width: 400px
+
+      img
+        display: block
+        float: left
+        margin-right: 2em
+        p
+          font-family: 'Gotham', serif
+          font-weight: lighter
+          &.quote__text
+            padding-top: 1.5em
+            padding-bottom: 1.5em
+  ul.slick-dots
+    width: 200px
+  .slick-dots li button:before
+    border-radius: 50%
+    border: 1px solid #fff
+    background-color: transparent
+    opacity: 1
+    color: transparent
+    width: 15px
+    height: 15px
+
+
+  .slick-dots li.slick-active button:before
+    border: 1px solid #fff
+    background-color: #fff
+    opacity: 1
+    color: transparent
 
 
 
@@ -70,6 +115,7 @@ body, html
         width: 100%
 
       input[type*="checkbox"]
+        transform: scale(1.6)
         height: 1em
       .input_container
         position: relative
@@ -134,7 +180,9 @@ body, html
     .col-sm-4
       text-align: center
       .col__img
+        background-color: #fff
         box-shadow: -7px -3px 0px 0px rgba(53, 53, 53, 0.96)
+        z-index: 5
         display: block
         margin: 0 auto
         border-radius: 50%
@@ -159,6 +207,9 @@ body, html
           display: block
           width: 50%
           margin: 20%
+        &.row__col--secondCol
+
+
       h3
         margin-top: 40px
         margin-bottom: 20px
@@ -234,10 +285,12 @@ body, html
         height: 150px
         width: 150px
         position: relative
+        transition: all 0.4s ease-in
         img
           padding: 15%
         &:after
           content: ''
+          transition: all 0.3s ease-in
           border-radius: 50%
           border: 1px solid #fff
           width: 150px
@@ -245,6 +298,17 @@ body, html
           top: -2%
           right: 2%
           position: absolute
+        &:hover
+          transform: scale(1.05)
+          &:after
+            content: ''
+            transform: scale(1.1)
+            transform: rotate(90deg)
+            top: 2%
+            bottom: 2%
+            right: -2%
+            left: 2%
+            position: absolute
       &--rightSide
         .itemBox__wrapper
           float: right
@@ -322,6 +386,7 @@ body, html
         width: 45%
       input[type*="checkbox"]
         height: 1em
+        transform: scale(1.6)
       .input_container
         position: relative
         width: 400px
@@ -339,6 +404,25 @@ body, html
           z-index: 100
           right: -3%
           top: -15%
+        &:after
+          transition: all 0.7s ease
+          content: ''
+          display: block
+          position: absolute
+          width: 0
+          height: 100px
+          background-image: url('img/arrow_form.png')
+          -webkit-background-size: cover
+          background-repeat: no-repeat
+          background-size: 100%
+          z-index: 100
+          right: -30%
+          top: -60%
+      &:hover
+        .input_container
+          &:after
+           width: 100px
+
       input[placeholder*="Phone"]
         &:before
           content: 'a'
@@ -378,7 +462,7 @@ body, html
         color: #fff
         margin-top: 1em
         display: block
-        line-height: 0.6em
+        line-height: 1.2em
         &:hover
           cursor: pointer
 
@@ -388,6 +472,15 @@ body, html
     -webkit-background-size: cover
     background-size: cover
     background-position: 50% 0
+    position: relative
+    .stroke
+      position: absolute
+      top: 0%
+      bottom: 10%
+      left: 0%
+      right: 10%
+      img
+        width: 100%
     h2
       font-size: 3em
       font-family: "Gotham", sans-serif
@@ -408,6 +501,7 @@ body, html
         text-align: center
         font-size: 18px
         width: 33%
+        min-width: 250px;
         line-height: 1.6em
         margin-top: 60px
         .item__img
@@ -417,6 +511,7 @@ body, html
           height: 200px
           margin: 0 auto
           padding: 13%
+          background-color: #fff
         .item__description
           h3
             text-transform: uppercase
@@ -454,10 +549,43 @@ body, html
       justify-content: center
       img
         margin: 0.3em
-  
 
+form
+  input, select
+    box-shadow: 1px 1px 1px 0px rgba(0, 4, 2, 0.75) inset
 
+.body__section--startTrading .col-sm-4.row__col--secondCol .col__img:before
+        transition: all 0.7s ease
+        content: ''
+        display: block
+        position: absolute
+        width: 1%
+        height: 100px
+        background-image: url('img/arrow_left.png')
+        -webkit-background-size: cover
+        background-repeat: no-repeat
+        background-size: 100%
+        z-index: 100
+        right: 100%
+        top: 25%
 
+.body__section--startTrading .col-sm-4.row__col--thirdCol .col__img:before
+          transition: all 0.7s ease
+          content: ''
+          display: block
+          position: absolute
+          width: 1%
+          height: 100px
+          background-image: url('img/arrow_right.png')
+          -webkit-background-size: cover
+          background-repeat: no-repeat
+          background-size: 100%
+          z-index: 100
+          right: 100%
+          top: 25%
+.body__section--startTrading .col-sm-4.row__col--secondCol .col__img.seen:before,
+.body__section--startTrading .col-sm-4.row__col--thirdCol .col__img.seen:before
+  width: 100%
 
 .body__footer
   padding-top: 40px
@@ -465,3 +593,5 @@ body, html
   color: #a3a3a3
   background-color: #282828
   font-family: 'Gautami', sans-serif
+
+

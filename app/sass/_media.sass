@@ -5,37 +5,92 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-  /**/
+  .header form .input_container
+    width: 100%
+  .header form input[type*=submit]
+    font-size: 18px
+    padding: 0 0.5em
+
+  .body__section--whyUs
+    padding-top: 200px
+  .body__section--startTrading .col-sm-4.row__col--secondCol .col__img:before,
+  .body__section--startTrading .col-sm-4.row__col--thirdCol .col__img:before
+      display: none
+  .body__section--skillsImprove ul
+    margin-left: 10px
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-  /**/
+  .header
+    background-position: 45% 50%
+  .header .item__quote
+    max-width: 500px
+    margin-top: 200px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
-  /**/
-
+  .header
+    background-position: 50% 50%
+  .header .item__quote
+    margin-top: 250px
 @media only screen and (max-width: 660px)
-  /**/
+  .body__section--whyUs
+    margin-top: 0
+    padding-top: 200px
+  .body__section--skillsImprove h2
+    line-height: 1em
+  .body__section--skillsImprove ul
+    font-size: 1.3em
+    padding-left: 0
+  .body__section--skillsImprove ul li:before
+    height: 30px
+    width: 30px
 
 @media  only screen and (max-width : 992px)
-  /**/
-@media only screen and (min-width: 992px)
-  /**/
-@media only screen and (max-width: 520px)
-  /**/
+  .body__section--skillsImprove h2
+    font-size: 2.4em
+  .body__section--Tools h2
+    line-height: 1em
+
+
 @media only screen and (max-width: 767px)
-  /**/
+  .body__section--Tools h2
+    font-size: 2em
 @media only screen and (max-width : 767px)
-  /**/
+  img[src*="interStroke.png"]
+    display: none !important
+
+@media only screen and (max-width: 600px)
+  .body__section--whyUs
+    padding-top: 250px
+  .body__section--formSection form input[placeholder*=First],
+  .body__section--formSection form input[placeholder*=Last],
+  .body__section--formSection form input[placeholder*=mail],
+  .body__section--formSection form input[placeholder*=Phone],
+  .body__section--formSection form select,
+  .body__section--formSection form .input_container
+    width: 100%
+  .body__section--formSection form select
+    margin-top: 15px
+    margin-bottom: 15px
+
 @media only screen and (max-width : 579px)
   /**/
 
-
+@media only screen and (max-width: 540px)
+  .body__section--whyUs
+    padding-top: 300px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-  /**/
-
+  .body__section--whyUs
+    padding-top: 350px
+  .body__section--formSection form input[type*=submit]
+    padding: 0 1em
+    font-size: 1em
+  .body__section--formSection form
+    margin: 1em 2em
+  .body__section--formSection h2
+    font-size: 2em
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/
@@ -67,7 +122,8 @@
 /*additional media querry
 
 @media only screen and (max-width: 850px)
-  /**/
+  .logoStripe .body__logoStripe img
+    width: auto
 @media only screen and (min-width: 850px)
   /**/
 
@@ -76,3 +132,26 @@
 @media only screen and (max-width: 405px)
   /**/
 
+@media  only screen and (max-width : 1200px) and (min-width: 768px)
+  .body__section--whyUs .col__itemBox--rightSide .itemBox__image
+    left: 5%
+  .body__section--whyUs .col__itemBox .itemBox__wrapper
+    width: 100%
+    float: right
+    padding-top: 200px
+  .body__section--whyUs .col__itemBox--rightSide .itemBox__image,
+  .body__section--whyUs .col__itemBox--leftSide .itemBox__image
+    margin: 0 auto
+    position: absolute
+  .body__section--whyUs .col__itemBox--leftSide .itemBox__image
+    float: right
+    right: 5%
+@media only screen and (max-width: 520px)
+  .body__section--whyUs .col__itemBox--rightSide .itemBox__image,
+  .body__section--whyUs .col__itemBox--leftSide .itemBox__image,
+    display: none
+  .body__section--whyUs .col__itemBox .itemBox__wrapper
+      width: 100%;
+      text-align: left
+  .body__section--whyUs .col__itemBox .itemBox__wrapper h2
+    text-align:  left
